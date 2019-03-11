@@ -2,6 +2,10 @@
 
 require 'bank'
 
+# As a User
+# So I can add money to my bank account
+# I would like to be able to deposit money
+
 RSpec.describe Bank do
   describe '#deposit' do
     it 'user can deposit money' do

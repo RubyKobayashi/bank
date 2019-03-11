@@ -14,7 +14,6 @@ class Bank
     @bank_balance -= amount
   end
 
-
   def balance
     @bank_balance
   end

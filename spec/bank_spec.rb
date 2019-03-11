@@ -19,5 +19,4 @@ RSpec.describe Bank do
       expect(bank.balance).to eq(500)
     end
   end
-
 end

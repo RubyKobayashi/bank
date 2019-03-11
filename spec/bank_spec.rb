@@ -11,4 +11,13 @@ RSpec.describe Bank do
       expect(bank.balance).to eq(1000)
     end
   end
+
+  describe '#withdraw' do
+    it 'detracts from the balance' do
+      bank.deposit(1000)
+      bank.withdraw(500)
+      expect(bank.balance).to eq(500)
+    end
+  end
+
 end

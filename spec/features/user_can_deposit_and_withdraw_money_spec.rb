@@ -12,6 +12,8 @@ RSpec.describe Bank do
       bank = Bank.new
       bank.deposit(1000)
       expect(bank.balance).to eq(1000)
+      bank.withdraw(500)
+      expect(bank.balance).to eq(500)
     end
   end
 end

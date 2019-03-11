@@ -3,16 +3,13 @@
 require 'bank'
 
 # As a User
-# So I can add money to my bank account
-# I would like to be able to deposit money
-
-# As a User
-# So I can use the money in my bank account
-# I would like to be able to withdraw money
+# So I can see how much money is in my bank account
+# I would like to be able to see my bank balance
 
 RSpec.describe Bank do
-  it 'user can deposit and withdraw money' do
+  it 'user can see the bank balance' do
     bank = Bank.new
+    expect(bank.balance).to eq(0)
     bank.deposit(1000)
     expect(bank.balance).to eq(1000)
     bank.withdraw(500)

@@ -19,4 +19,10 @@ RSpec.describe Bank do
       expect(bank.balance).to eq(500)
     end
   end
+
+  describe '#balance' do
+    it 'starts off at 0' do
+      expect(bank.balance).to eq(0)
+    end
+  end
 end

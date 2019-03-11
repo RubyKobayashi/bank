@@ -11,8 +11,7 @@ require 'bank'
 # I would like to be able to withdraw money
 
 RSpec.describe Bank do
-  describe '#deposit' do
-    it 'user can deposit money' do
+    it 'user can deposit and withdraw money' do
       bank = Bank.new
       bank.deposit(1000)
       expect(bank.balance).to eq(1000)

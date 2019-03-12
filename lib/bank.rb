@@ -15,6 +15,8 @@ class Bank
   end
 
   def withdraw(amount)
+    raise 'You do not have enough credit' if not_enough_credit?(amount)
+
     @bank_balance -= amount
     record_withdrawal_transaction(amount)
   end
@@ -22,6 +24,8 @@ class Bank
   def balance
     @bank_balance
   end
+
+  private
 
   def date_today
     Time.now.strftime('%d/%m/%Y')
@@ -35,5 +39,9 @@ class Bank
   def record_withdrawal_transaction(amount)
     @record.push(date: date_today.to_s,
                  credit: ' ', debit: amount.to_s, balance: @bank_balance.to_s)
+  end
+
+  def not_enough_credit?(amount)
+    (@bank_balance - amount).negative?
   end
 end

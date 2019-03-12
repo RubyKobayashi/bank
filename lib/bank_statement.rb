@@ -17,8 +17,7 @@ class BankStatement
 
   def make_columns
     # column titles
-    col_labels = { date: 'date', credit: 'credit',
-                   debit: 'debit', balance: 'balance' }
+    col_labels = { date: 'date', credit: 'credit', debit: 'debit', balance: 'balance' }
     @columns = col_labels.each_with_object({}) do |(col, label), h|
       h[col] = { label: label,
                  width: [@bank.record.map { |g| g[col].size }.max, label.size].max }

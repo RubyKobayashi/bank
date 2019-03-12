@@ -23,6 +23,12 @@ RSpec.describe Bank do
       bank.withdraw(500)
       expect(bank.balance).to eq(500)
     end
+
+    context 'when not enough credit' do
+      it 'throws an error' do
+        expect { bank.withdraw(500) }.to raise_error('You do not have enough credit')
+      end
+    end
   end
 
   describe '#balance' do

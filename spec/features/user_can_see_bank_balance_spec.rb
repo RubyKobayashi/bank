@@ -12,6 +12,6 @@ RSpec.describe BankStatement do
     bank = Bank.new
     bank_statement = BankStatement.new(bank)
     bank.deposit(1000)
-    expect { bank_statement.print }.to output("1000\n").to_stdout
+    expect { bank_statement.print }.to output("                            \n date       || credit || debit || balance \n 12/03/2019 || 1000   ||       || 1000    \n                            \n").to_stdout
   end
 end

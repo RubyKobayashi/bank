@@ -19,9 +19,8 @@ RSpec.describe BankStatement do
   before(:each) do
     @date = date_today
     allow(bank).to receive(:record).and_return([{ date: @date,
-      credit: '1000', debit: ' ', balance: '1000' }])
+                                                  credit: '1000', debit: ' ', balance: '1000' }])
   end
-
 
   describe '#print' do
     it 'prints the balance' do

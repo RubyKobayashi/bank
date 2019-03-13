@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 require 'bank'
-require 'bank_statement'
 
 # As a User
 # So I can see how much money is in my bank account
-# I would like to be able to see my bank balance
+# I would like to be able to see my bank balance on my bank statement
 
 RSpec.describe BankStatement do
   it 'user can see the bank balance' do

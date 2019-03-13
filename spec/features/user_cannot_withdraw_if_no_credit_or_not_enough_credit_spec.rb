@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-require 'bank'
-
-# As a User
-# So I can add money to my bank account
-# I would like to be able to deposit money
-
 # As a User
 # So I can use the money in my bank account
 # I would like to be able to withdraw money

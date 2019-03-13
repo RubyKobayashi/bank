@@ -3,8 +3,12 @@
 require 'bank'
 
 # As a User
-# So I can have a time referenced record
-# I would like to record the dates of when the transactions were made
+# So I have a convenient time referenced record
+# I would like to see transactions on my bank balance in reverse chronological order
+
+# As a User
+# So I can have a physical record
+# I would like to print bank statements with dates, type of transaction and bank balance
 
 RSpec.describe BankStatement do
   it 'user can see transactions in reverse chronological order, ' do

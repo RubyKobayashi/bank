@@ -17,7 +17,7 @@ To use linter:
 -----
 **User Stories:**
 
- 
+
 ```
 As a User
 So I can add money to my bank account
@@ -33,14 +33,14 @@ I would like to be able to withdraw money
 ```
 As a User
 So I can see how much money is in my bank account
-I would like to be able to see my bank balance
+I would like to be able to see my bank balance on my bank statement
 ```
 
 
 ```
 As a User
-So I can have a time referenced record
-I would like to record the dates of when the transactions were made
+So I have a convenient time referenced record
+I would like to see transactions on my bank balance in reverse chronological order
 ```
 
 ```

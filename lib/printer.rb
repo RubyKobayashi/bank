@@ -7,6 +7,6 @@ class Printer
   end
 
   def print
-    @bank_statement.format
+    @bank_statement.prepare_to_print
   end
 end

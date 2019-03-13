@@ -24,7 +24,7 @@ RSpec.describe BankStatement do
 
   describe '#print' do
     it 'prints the balance' do
-      expect { bank_statement.format }.to output("                            \n date       || credit || debit || balance \n 2019-03-12 || 1000   ||       || 1000    \n                            \n").to_stdout
+      expect { bank_statement.prepare_to_print }.to output("                            \n date       || credit || debit || balance \n 2019-03-12 || 1000   ||       || 1000    \n                            \n").to_stdout
     end
   end
 end

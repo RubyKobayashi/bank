@@ -6,12 +6,18 @@ class BankStatement
     @bank = bank
   end
 
-  def format
+  def prepare_to_print
     make_columns
     write_divider
     write_header
-    @bank.record.reverse_each { |h| write_line(h) }
+    format_record_of_transactions
     write_divider
+  end
+
+  private
+
+  def format_record_of_transactions
+    @bank.record.reverse_each { |h| write_line(h) }
   end
 
   def make_columns

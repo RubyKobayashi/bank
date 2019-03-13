@@ -2,6 +2,7 @@
 
 require 'printer'
 
+
 RSpec.describe Printer do
   let(:printer) { described_class.new(bank_statement) }
   let(:bank_statement) { double :bank_statement }
@@ -14,7 +15,7 @@ RSpec.describe Printer do
 
   describe '#print' do
     it 'prints bank statements' do
-      allow(bank_statement).to receive(:format).and_return("                            \n date       || credit || debit || balance \n 12/03/2019 || 1000   ||       || 1000    \n                            \n")
+      allow(bank_statement).to receive(:prepare_to_print).and_return("                            \n date       || credit || debit || balance \n 12/03/2019 || 1000   ||       || 1000    \n                            \n")
       expect { print(printer.print) }.to output("                            \n date       || credit || debit || balance \n 12/03/2019 || 1000   ||       || 1000    \n                            \n").to_stdout
     end
   end

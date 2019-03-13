@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'bank'
-require 'printer'
 
 # As a User
 # So I can have a time referenced record
@@ -17,7 +16,7 @@ RSpec.describe BankStatement do
     allow(bank).to receive(:date_today).and_return('12/03/2019')
     bank.withdraw(500)
     bank_statement = BankStatement.new(bank)
-    printer = Printer.new(bank_statement)
-    expect { printer.print }.to output("                            \n date       || credit || debit || balance \n 10/03/2019 || 1000   ||       || 1000    \n 11/03/2019 || 2000   ||       || 3000    \n 12/03/2019 ||        || 500   || 2500    \n                            \n").to_stdout
+    p bank_statement.print
+    expect { bank_statement.print }.to output("                            \n date       || credit || debit || balance \n 10/03/2019 || 1000   ||       || 1000    \n 11/03/2019 || 2000   ||       || 3000    \n 12/03/2019 ||        || 500   || 2500    \n                            \n").to_stdout
   end
 end

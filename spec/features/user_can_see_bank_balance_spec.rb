@@ -13,6 +13,7 @@ RSpec.describe BankStatement do
     allow(bank).to receive(:date_today).and_return('12/03/2019')
     bank_statement = BankStatement.new(bank)
     bank.deposit(1000)
-    expect { bank_statement.print }.to output("                            \n date       || credit || debit || balance \n 12/03/2019 || 1000   ||       || 1000    \n                            \n").to_stdout
+    printer = Printer.new(bank_statement)
+    expect { printer.print }.to output("                            \n date       || credit || debit || balance \n 12/03/2019 || 1000   ||       || 1000    \n                            \n").to_stdout
   end
 end

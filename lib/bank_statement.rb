@@ -6,17 +6,15 @@ class BankStatement
     @bank = bank
   end
 
-  def print
+  def format
     make_columns
     write_divider
     write_header
-    # write_divider
     @bank.record.each { |h| write_line(h) }
     write_divider
   end
 
   def make_columns
-    # column titles
     col_labels = { date: 'date', credit: 'credit', debit: 'debit', balance: 'balance' }
     @columns = col_labels.each_with_object({}) do |(col, label), h|
       h[col] = { label: label,

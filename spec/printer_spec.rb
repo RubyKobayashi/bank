@@ -2,7 +2,6 @@
 
 require 'printer'
 
-
 RSpec.describe Printer do
   let(:printer) { described_class.new(bank_statement) }
   let(:bank_statement) { double :bank_statement }

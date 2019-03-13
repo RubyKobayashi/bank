@@ -10,7 +10,7 @@ class BankStatement
     make_columns
     write_divider
     write_header
-    @bank.record.reverse.each { |h| write_line(h) }
+    @bank.record.reverse_each { |h| write_line(h) }
     write_divider
   end
 
@@ -18,7 +18,7 @@ class BankStatement
     col_labels = { date: 'date', credit: 'credit', debit: 'debit', balance: 'balance' }
     @columns = col_labels.each_with_object({}) do |(col, label), h|
       h[col] = { label: label,
-                 width: [@bank.record.map { |g| g[col].size }.max, label.size].max }
+                 width: [@bank.record.map { |element| element[col].size }.max, label.size].max }
     end
   end
 

@@ -16,6 +16,7 @@ class Bank
 
   def withdraw(amount)
     raise 'You do not have enough credit' if not_enough_credit?(amount)
+
     @bank_balance -= amount
     record_withdrawal_transaction(amount)
   end

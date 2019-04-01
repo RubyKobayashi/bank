@@ -5,23 +5,23 @@ class BankAccount
   attr_reader :record
 
   def initialize
-    @bank_balance = 0
+    @balance = 0
     @record = []
   end
 
   def deposit(amount)
-    @bank_balance += amount
+    @balance += amount
     record_deposit_transaction(amount)
   end
 
   def withdraw(amount)
     raise 'You do not have enough credit' if not_enough_credit?(amount)
-    @bank_balance -= amount
+    @balance -= amount
     record_withdrawal_transaction(amount)
   end
 
   def balance
-    @bank_balance
+    @balance
   end
 
   private
@@ -32,15 +32,15 @@ class BankAccount
 
   def record_deposit_transaction(amount)
     @record.push(date: date_today.to_s,
-                 credit: amount.to_s, debit: ' ', balance: @bank_balance.to_s)
+                 credit: amount.to_s, debit: ' ', balance: @balance.to_s)
   end
 
   def record_withdrawal_transaction(amount)
     @record.push(date: date_today.to_s,
-                 credit: ' ', debit: amount.to_s, balance: @bank_balance.to_s)
+                 credit: ' ', debit: amount.to_s, balance: @balance.to_s)
   end
 
   def not_enough_credit?(amount)
-    (@bank_balance - amount).negative?
+    (@balance - amount).negative?
   end
 end

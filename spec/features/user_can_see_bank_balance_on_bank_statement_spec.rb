@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'bank'
+require 'bank_account'
 
 # As a User
 # So I can see how much money is in my bank account
@@ -8,10 +8,10 @@ require 'bank'
 
 RSpec.describe BankStatement do
   it 'user can see the bank balance' do
-    bank = Bank.new
-    allow(bank).to receive(:date_today).and_return('12/03/2019')
-    bank_statement = BankStatement.new(bank)
-    bank.deposit(1000)
+    bank_account = BankAccount.new
+    allow(bank_account).to receive(:date_today).and_return('12/03/2019')
+    bank_statement = BankStatement.new(bank_account)
+    bank_account.deposit(1000)
     expect { bank_statement.prepare_to_print }.to output("                            \n date       || credit || debit || balance \n 12/03/2019 || 1000   ||       || 1000    \n                            \n").to_stdout
   end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'bank'
+require 'bank_account'
 require 'bank_statement'
 
 RSpec.describe BankStatement do

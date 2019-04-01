@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/spec/bank_spec.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/spec/bank_account_spec.rb": [
         null,
         null,
         1,
@@ -71,7 +71,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/lib/bank.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/lib/bank_account.rb": [
         null,
         null,
         null,
@@ -90,7 +90,6 @@
         null,
         1,
         7,
-        null,
         4,
         4,
         null,
@@ -120,7 +119,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/spec/bank_statement_spec.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/spec/bank_statement_spec.rb": [
         null,
         null,
         1,
@@ -152,7 +151,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/lib/bank_statement.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/lib/bank_statement.rb": [
         null,
         null,
         null,
@@ -197,7 +196,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/spec/features/user_can_deposit_and_withdraw_money_spec.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/spec/features/user_can_deposit_and_withdraw_money_spec.rb": [
         null,
         null,
         null,
@@ -218,7 +217,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/spec/features/user_can_see_bank_balance_on_bank_statement_spec.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/spec/features/user_can_see_bank_balance_on_bank_statement_spec.rb": [
         null,
         null,
         1,
@@ -237,7 +236,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/spec/features/user_can_see_transactions_in_reverse_chronological_order_spec.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/spec/features/user_can_see_transactions_in_reverse_chronological_order_spec.rb": [
         null,
         null,
         1,
@@ -265,7 +264,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/spec/features/user_cannot_withdraw_if_no_credit_or_not_enough_credit_spec.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/spec/features/user_cannot_withdraw_if_no_credit_or_not_enough_credit_spec.rb": [
         null,
         null,
         null,
@@ -285,7 +284,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/spec/printer_spec.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/spec/printer_spec.rb": [
         null,
         null,
         1,
@@ -309,7 +308,7 @@
         null,
         null
       ],
-      "/Users/rubykobayashi/Projects/Makers_wk10/bank/lib/printer.rb": [
+      "/Users/rubykobayashi/Projects/Post1/bank/lib/printer.rb": [
         null,
         null,
         null,
@@ -324,6 +323,6 @@
         null
       ]
     },
-    "timestamp": 1552480362
+    "timestamp": 1554123865
   }
 }
